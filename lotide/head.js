@@ -15,7 +15,7 @@ const head = (arr) => {
   return arr[0]; 
 }
 
-assertEqual(head([0,2,4], 0));
-assertEqual(head([], undefined));
-assertEqual(head(["hi", 3, {}], 0));
+assertEqual(head([0,2,4]), 0);
+assertEqual(head([]), undefined);
+assertEqual(head(["hi", 3, {}]), 0);
 
