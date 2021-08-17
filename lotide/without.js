@@ -8,20 +8,9 @@ const assertArraysEqual = (arr1, arr2) => {
   }
 };
 
-const without = (source, itemsToRemove) => {
-  const copySource = [...source];
-  for (let item of source) {
-    for (let rmItem of itemsToRemove) {
-      if (item === rmItem) {
-        const index = copySource.indexOf(item);
-        copySource.splice(index,1);
-      }
-    }
-  }
-  console.log(copySource);
-  return copySource;
-};
+const without = (source, itemsToRemove) => source.filter((item) => itemsToRemove.indexOf(item) === -1); 
 
 assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
 assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]),["1", "2"]);
 assertArraysEqual(without([0, "2", "3"], [false]),[0,"2", "3"]);
+assertArraysEqual(without([0, "2", "3"], [false]),[1,"2", "3"]);
