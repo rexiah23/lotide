@@ -29,7 +29,7 @@ const abc = { a: "1", b: "2", c: "3" };
 assertEqual(eqObjects(ab, abc), false);
 
 //Object type test
-const cd = { c: "1", d: ["2",3, 4] };
+const cd = { c: "1", d: ["2", 3, 4] };
 const dc = { d: ["2", 3], c: "1" };
 assertEqual(eqObjects(cd, dc), false);
 
