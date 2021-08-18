@@ -9,13 +9,17 @@ const assertArraysEqual = (arr1, arr2) => {
 };
 
 const flatten = (arr) => {
+  
   const flattenedArr = [];
 
   for (let currItem of arr) {
     Array.isArray(currItem) ? flattenedArr.push(...flatten(currItem)) : flattenedArr.push(currItem);
   }
-
+  console.log(flattenedArr);
   return flattenedArr;
 };
+
+
 console.log(assertArraysEqual(flatten([1,2,[3,4]]), [1,2,3,4]));
 console.log(assertArraysEqual(flatten([[1,[2,3,[4]]], 5]), [1,2,3,4,5]));
+
