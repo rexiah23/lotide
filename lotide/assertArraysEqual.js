@@ -1,4 +1,4 @@
-const eqArrays = (arr1, arr2) => JSON.stringify(arr1) === JSON.stringify(arr2);
+const eqArrays = require('./eqArrays');
 
 const assertArraysEqual = (arr1, arr2) => {
   if (eqArrays(arr1, arr2)) {
@@ -8,7 +8,5 @@ const assertArraysEqual = (arr1, arr2) => {
   }
 }
 
-assertArraysEqual(eqArrays([1,2,3], [1,2,3]), true); 
-assertArraysEqual(eqArrays([1,2,3], [1,'a',3]), false); 
-assertArraysEqual(eqArrays([1,2,3,4], [1,2,3]), true); 
-assertArraysEqual(eqArrays([1,2,[3,4],4], [1,2,[3,4],4]), true); 
+module.exports = assertArraysEqual; 
+
