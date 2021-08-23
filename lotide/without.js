@@ -13,4 +13,3 @@ const without = (source, itemsToRemove) => source.filter((item) => itemsToRemove
 assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
 assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]),["1", "2"]);
 assertArraysEqual(without([0, "2", "3"], [false]),[0,"2", "3"]);
-assertArraysEqual(without([0, "2", "3"], [false]),[1,"2", "3"]);
